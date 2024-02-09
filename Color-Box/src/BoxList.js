@@ -7,6 +7,9 @@ function BoxList() {
   const addBox = newBox => {
     setBoxes(boxes => [...boxes, { ...newBox }]);
   };
+  const deleteBox = index => {
+    setBoxes(allBoxes => allBoxes.filter((box, i) => i !== index));
+  };
 
   return (
     <div className="BoxList">
@@ -14,7 +17,13 @@ function BoxList() {
       <>
         {boxes.map(({ color, width, height }, index) => (
           <div key={index}>
-            <Box color={color} width={width} height={height} />
+            <Box
+              color={color}
+              width={width}
+              height={height}
+              index={index}
+              deleteBox={deleteBox}
+            />
           </div>
         ))}
       </>
