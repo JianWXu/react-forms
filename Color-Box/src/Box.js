@@ -1,13 +1,17 @@
 import React from "react";
 
 function Box({ color, width, height }) {
-  let width = `${width}0px`;
-  let height = `${height}0px`;
+  let widthString = `${width}0px`;
+  let heightString = `${height}0px`;
 
   return (
     <div className="Box">
       <div
-        style={{ backgroundColor: color, width: width, height: height }}
+        style={{
+          backgroundColor: color,
+          width: widthString,
+          height: heightString,
+        }}
       ></div>
     </div>
   );

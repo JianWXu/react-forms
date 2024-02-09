@@ -53,6 +53,7 @@ const NewBoxForm = ({ addBox }) => {
         value={formData.height}
         onChange={handleChange}
       />
+      <button>Add Box</button>
     </form>
   );
 };
