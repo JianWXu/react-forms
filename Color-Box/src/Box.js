@@ -11,6 +11,7 @@ function Box({ color, width, height, deleteBox, index }) {
   return (
     <div className="Box">
       <div
+        className="Box-Color"
         style={{
           backgroundColor: color,
           width: widthString,
